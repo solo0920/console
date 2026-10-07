@@ -16,7 +16,7 @@ crontab -l 2>/dev/null | grep -v 'ensure-stack\.sh' >"$_cron" || true
 crontab "$_cron" 2>/dev/null || true
 rm -f "$_cron"
 
-cd ~/projects/console
+cd ~/projects/ragdemo.win
 docker compose down
 
 echo "排程已取消、stack 已收掉。要關機請自己跑 sd.sh"
